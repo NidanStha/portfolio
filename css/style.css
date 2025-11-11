@@ -90,6 +90,25 @@
     width: 40px;
     height: 40px;
 }
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 
 /* Responsive: less than 880px, make 2 per row */
 @media (max-width:880px){
@@ -103,6 +122,22 @@
 
 .skills{margin-top:18px;width:100%}
 .skill-pill{display:inline-block;padding:6px 10px;border-radius:999px;margin:6px 6px 0 0;background:rgba(255,255,255,0.08);font-size:0.85rem}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 20px;
+}
+
+.skill-img {
+  width: 40%;               /* smaller image */
+  aspect-ratio: 1 / 1;      /* keeps it square */
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 auto 10px;      /* centers it */
+  display: block;
+}
+
+
 
     /* Right column */
     .right{flex:0 0 75%;background:var(--panel);border-radius:16px;min-height:100%;box-shadow:0 6px 20px rgba(0,0,0,0.4);display:flex;flex-direction:column;height:100%;overflow:hidden}
